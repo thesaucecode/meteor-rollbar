@@ -6,7 +6,16 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.1.0.2');
-  api.addFiles('rollbar.js');
+  api.versionsFrom('METEOR@1.0');
+
+  Npm.depends({
+    'rollbar': '0.5.3'
+  });
+  
+  api.addFiles('lib/server/rollbar-server.js', 'server');
+
+  api.addFiles('lib/rollbar.js', ['client', 'server']);
+  api.addFiles('lib/client/rollbar-client.js', 'client');
+
 });
 
