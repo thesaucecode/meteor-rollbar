@@ -17,5 +17,10 @@ Package.onUse(function(api) {
   api.addFiles('lib/rollbar.js', ['client', 'server']);
   api.addFiles('lib/client/rollbar-client.js', 'client');
 
+  api.export([
+    'rollbar',
+    'throwError',
+    'handleError'
+  ], 'server');
 });
 
