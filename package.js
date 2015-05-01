@@ -11,11 +11,19 @@ Package.onUse(function(api) {
   Npm.depends({
     'rollbar': '0.5.3'
   });
+
+  //api.use('http', 'client');
+  api.use('check', 'server');
   
   api.addFiles('lib/server/rollbar-server.js', 'server');
 
   api.addFiles('lib/rollbar.js', ['client', 'server']);
   api.addFiles('lib/client/rollbar-client.js', 'client');
+
+  api.export([
+    'throwError',
+    'handleError'
+  ], 'client');
 
   api.export([
     'rollbar',
