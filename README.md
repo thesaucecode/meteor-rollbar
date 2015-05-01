@@ -2,7 +2,7 @@
 
 Kickass [Rollbar](https://rollbar.com/) integration for Meteor projects.
 
-###Installation
+### Installation
 
 1. Run `meteor add saucecode:rollbar`
 2. Set `'ROLLBAR_SERVER_ACCESS_TOKEN'`, `'ROLLBAR_CLIENT_ACCESS_TOKEN'` and optionally, the `'ROLLBAR_ENVIRONMENT'`environment variables with your [client and server access tokens for rollbar](https://rollbar.com/)
@@ -15,7 +15,7 @@ $ meteor add saucecode:rollbar
 $ ROLLBAR_SERVER_ACCESS_TOKEN=acefaketoken1 ROLLBAR_CLIENT_ACCESS_TOKEN=acefaketoken2imsocreative ROLLBAR_ENVIRONMENT=development meteor
 ```
 
-###Usage
+### Usage
 
 You have all the inbuilt [rollbar node functions](https://rollbar.com/docs/notifier/node_rollbar/) available on the server through the namespace `rollbar`. 
 
@@ -23,7 +23,7 @@ We have also built in two really simple and useful functions for logging errors 
 
 ### `throwError()`
 
-#####Arguments:
+##### Arguments:
 
 1. String(Mandatory): message to log to rollbar via the API.  
 2. Object(Optional): each key-value pair will be reported in the same rollbar item.  Useful for adding more context to your errors
@@ -32,7 +32,7 @@ We have also built in two really simple and useful functions for logging errors 
 
 ### `handleError()`
 
-#####Arguments:
+##### Arguments:
 
 1. Exception(Mandatory): exception to log to rollbar via the API.  
 2. Object(Optional): each key-value pair will be reported in the same rollbar item.  Useful for adding more context to your errors
