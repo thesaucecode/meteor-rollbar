@@ -1,17 +1,17 @@
-# thesaucecode:rollbar
+# saucecode:rollbar
 
 Kickass [Rollbar](https://rollbar.com/) integration for Meteor projects.
 
 ###Installation
 
-1. Run `meteor add thesaucecode:rollbar`
+1. Run `meteor add saucecode:rollbar`
 2. Set `'ROLLBAR_SERVER_ACCESS_TOKEN'`, `'ROLLBAR_CLIENT_ACCESS_TOKEN'` and optionally, the `'ROLLBAR_ENVIRONMENT'`environment variables with your [client and server access tokens for rollbar](https://rollbar.com/)
 3. Run meteor
 
 E.g.
 
 ```bash
-$ meteor add thesaucecode:rollbar
+$ meteor add saucecode:rollbar
 $ ROLLBAR_SERVER_ACCESS_TOKEN=acefaketoken1 ROLLBAR_CLIENT_ACCESS_TOKEN=acefaketoken2imsocreative ROLLBAR_ENVIRONMENT=development meteor
 ```
 
