@@ -1,7 +1,7 @@
 Package.describe({
   name: 'thesaucecode:rollbar',
   version: '0.0.1',
-  summary: 'Rollbar error integrations for Meteor',
+  summary: 'Rollbar error reporting integrations for Meteor',
   documentation: 'README.md'
 });
 
@@ -12,7 +12,6 @@ Package.onUse(function(api) {
     'rollbar': '0.5.3'
   });
 
-  //api.use('http', 'client');
   api.use('check', 'server');
   
   api.addFiles('lib/server/rollbar-server.js', 'server');
