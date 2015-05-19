@@ -1,6 +1,6 @@
 Package.describe({
   name: 'saucecode:rollbar',
-  version: '0.0.3',
+  version: '0.0.4',
   summary: 'Rollbar error reporting integrations for Meteor',
   documentation: 'README.md'
 });
