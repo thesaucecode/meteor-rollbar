@@ -9,15 +9,15 @@ Package.onUse(function(api) {
   api.versionsFrom('METEOR@1.0');
 
   Npm.depends({
-    'rollbar': '0.5.3'
+    'rollbar': '0.5.4'
   });
 
   api.use('check', 'server');
+  api.use('meteorhacks:inject-initial', ['client', 'server']);
   
   api.addFiles('lib/server/rollbar-server.js', 'server');
-
-  api.addFiles('lib/rollbar.js', ['client', 'server']);
   api.addFiles('lib/client/rollbar-client.js', 'client');
+  api.addFiles('lib/private/client-head.html', 'server', { isAsset: true });
 
   api.export([
     'throwError',
