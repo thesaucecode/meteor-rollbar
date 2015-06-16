@@ -13,7 +13,6 @@ Package.onUse(function(api) {
   });
 
   api.use('check', 'server');
-  api.use('meteorhacks:inject-initial', ['client', 'server']);
   
   api.addFiles('lib/server/rollbar-server.js', 'server');
   api.addFiles('lib/client/rollbar-client.js', 'client');
