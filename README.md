@@ -39,4 +39,14 @@ We have also built in two really simple and useful functions for logging errors 
 3. String(Optional): Finally, you can elect to add the log level in the third and final argument. (Default: 'error') (valid severity levels: "critical", "error", "warning", "info", "debug")
 
 
+### Other considerations
+
+##### Browser Policy
+
+If you are using the `browser-policy` package, you will need to add the Rollbar cloudfront distribution as a trusted script origin. You can do this with the current endpoint by adding the following to your code
+
+```javascript
+BrowserPolicy.content.allowScriptOrigin('d37gvrvc0wt4s1.cloudfront.net');
+```
+
 
