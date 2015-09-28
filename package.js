@@ -1,22 +1,25 @@
 Package.describe({
   name: 'saucecode:rollbar',
-  version: '0.0.8',
+  version: '0.5.8',
   summary: 'Rollbar error reporting integrations for Meteor',
   documentation: 'README.md'
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('METEOR@1.0');
+  api.versionsFrom('METEOR@1.2');
 
   Npm.depends({
-    rollbar: '0.5.4'
+    rollbar: '0.5.8'
   });
 
-  api.use('check', 'server');
+  api.use([
+    'check',
+    'underscore'
+  ], 'server');
 
   api.addFiles('lib/server/rollbar-server.js', 'server');
   api.addFiles('lib/client/rollbar-client.js', 'client');
-  api.addFiles('lib/private/client-head.html', 'server', { isAsset: true });
+  api.addAssets('lib/private/client-head.html', 'server');
 
   api.export([
     'throwError',
